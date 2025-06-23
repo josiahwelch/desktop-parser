@@ -59,7 +59,7 @@ class DesktopFile:
                             self.data[key] = {localekey: line.split("=")[1]}
                     continue
                 if "=" in line:
-                    key, value = line.split("=")
+                    key, value = line.split("=", 1)
                     if issection:
                         self.data[section][key] = value
                     else:
